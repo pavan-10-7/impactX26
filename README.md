@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ImpactX 26 Website
 
 Official website for **ImpactX 26**, a premier 24-Hour National Level Offline Hackathon presented by IEEE Computer Society RNSIT and the Department of CSE (Cyber Security).
@@ -82,4 +81,3 @@ The optimized static files will be generated in the `dist` folder, ready to be d
 This project is maintained by IEEE Computer Society RNSIT. All rights reserved.
 =======
 # impactX26
->>>>>>> 15f28889175ef72e75ef218fda30891cbac8ac0a
