@@ -1,6 +1,7 @@
+import React from "react";
 import { motion } from "motion/react";
 
-export function SponsorsSection() {
+export const SponsorsSection = React.memo(function SponsorsSection() {
   const sponsorCategories = [
     {
       title: "Title Sponsor",
@@ -76,7 +77,7 @@ export function SponsorsSection() {
                 {category.sponsors.map((sponsor, index) => (
                   <div
                     key={index}
-                    className={`group relative rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 ${sponsor.size === "large" ? "p-16" : "p-12"
+                    className={`group relative rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 ${sponsor.size === "large" ? "p-16" : "p-12"
                       }`}
                   >
                     {/* Glow Effect */}
@@ -105,7 +106,7 @@ export function SponsorsSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 text-center"
         >
-          <div className="inline-flex flex-col items-center gap-4 p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10">
+          <div className="inline-flex flex-col items-center gap-4 p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10">
             <p className="text-lg text-[#F8FAFC]/80">
               Interested in sponsoring ImpactX 26?
             </p>
@@ -120,4 +121,4 @@ export function SponsorsSection() {
       </div>
     </section>
   );
-}
+});

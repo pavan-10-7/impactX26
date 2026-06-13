@@ -1,7 +1,8 @@
+import React from "react";
 import { motion } from "motion/react";
 import { Users, Clock, GraduationCap, Globe, Lightbulb, Award } from "lucide-react";
 
-export function EventSnapshot() {
+export const EventSnapshot = React.memo(function EventSnapshot() {
   const cards = [
     {
       icon: Globe,
@@ -64,7 +65,7 @@ export function EventSnapshot() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10"
+              className="group relative p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10"
             >
               {/* Glow Effect */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#60A5FA]/0 to-[#3B82F6]/0 group-hover:from-[#60A5FA]/5 group-hover:to-[#3B82F6]/5 transition-all duration-300" />
@@ -102,4 +103,4 @@ export function EventSnapshot() {
       </div>
     </section>
   );
-}
+});

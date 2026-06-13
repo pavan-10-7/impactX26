@@ -1,7 +1,8 @@
+import React from "react";
 import { motion } from "motion/react";
 import { Calendar, UserCheck, Trophy, Code } from "lucide-react";
 
-export function TimelineSection() {
+export const TimelineSection = React.memo(function TimelineSection() {
   const timeline = [
     {
       icon: Calendar,
@@ -68,7 +69,7 @@ export function TimelineSection() {
               >
                 {/* Content Card */}
                 <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
-                  <div className="inline-block p-6 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 group">
+                  <div className="inline-block p-6 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 group">
                     <div className={`flex items-center gap-4 mb-3 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
                       <div className="p-3 rounded-2xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 border border-white/10 group-hover:scale-110 transition-transform duration-300">
                         <item.icon className="w-6 h-6 text-[#60A5FA]" />
@@ -83,9 +84,7 @@ export function TimelineSection() {
                 </div>
 
                 {/* Timeline Dot */}
-                <div className="flex-shrink-0 w-4 h-4 rounded-full bg-gradient-to-br from-[#60A5FA] to-[#3B82F6] border-4 border-[#020617] shadow-lg shadow-[#60A5FA]/50 z-10 relative">
-                  <div className="absolute inset-0 rounded-full bg-[#60A5FA] animate-ping opacity-20" />
-                </div>
+                <div className="flex-shrink-0 w-4 h-4 rounded-full bg-gradient-to-br from-[#60A5FA] to-[#3B82F6] border-4 border-[#020617] shadow-lg shadow-[#60A5FA]/50 z-10 relative" />
 
                 {/* Spacer for alternating layout */}
                 <div className="hidden md:block flex-1" />
@@ -103,7 +102,7 @@ export function TimelineSection() {
           className="mt-16 text-center"
         >
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-[#60A5FA]/10 to-[#3B82F6]/10 border border-white/10">
-            <div className="w-2 h-2 bg-[#60A5FA] rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-[#60A5FA] rounded-full" />
             <span className="text-sm text-[#F8FAFC]/60">
               Detailed hackathon day schedule will be announced closer to the event
             </span>
@@ -112,4 +111,4 @@ export function TimelineSection() {
       </div>
     </section>
   );
-}
+});

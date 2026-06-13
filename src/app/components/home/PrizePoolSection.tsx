@@ -1,7 +1,8 @@
 import { motion, useSpring, useTransform, useInView } from "motion/react";
 import { Trophy, Award, Star, Sparkles } from "lucide-react";
-import { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 
+// ... AnimatedNumber implementation ...
 function AnimatedNumber({ value }: { value: number }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -25,7 +26,7 @@ function AnimatedNumber({ value }: { value: number }) {
   return <motion.span ref={ref}>{displayValue}</motion.span>;
 }
 
-export function PrizePoolSection() {
+export const PrizePoolSection = React.memo(function PrizePoolSection() {
   const topPrizes = [
     {
       icon: Trophy,
@@ -74,13 +75,13 @@ export function PrizePoolSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-block relative mb-12"
           >
-            <div className="relative p-12 rounded-3xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 backdrop-blur-xl border border-[#60A5FA]/30 shadow-2xl">
+            <div className="relative p-12 rounded-3xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 backdrop-blur-md border border-[#60A5FA]/30 shadow-2xl">
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4">
-                <Sparkles className="w-8 h-8 text-[#60A5FA] animate-pulse" />
+                <Sparkles className="w-8 h-8 text-[#60A5FA]" />
               </div>
               <div className="absolute -bottom-4 -left-4">
-                <Sparkles className="w-8 h-8 text-[#3B82F6] animate-pulse" />
+                <Sparkles className="w-8 h-8 text-[#3B82F6]" />
               </div>
               
               <div className="flex items-center justify-center gap-4 mb-4">
@@ -105,7 +106,7 @@ export function PrizePoolSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative p-6 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 flex flex-col items-center text-center"
+                className="group relative p-6 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 flex flex-col items-center text-center"
               >
                 {/* Glow Effect */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#60A5FA]/0 to-[#3B82F6]/0 group-hover:from-[#60A5FA]/5 group-hover:to-[#3B82F6]/5 transition-all duration-300" />
@@ -137,7 +138,7 @@ export function PrizePoolSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="group relative p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-6"
+            className="group relative p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-6"
           >
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#60A5FA]/0 to-[#3B82F6]/0 group-hover:from-[#60A5FA]/5 group-hover:to-[#3B82F6]/5 transition-all duration-300" />
             
@@ -179,4 +180,4 @@ export function PrizePoolSection() {
       </div>
     </section>
   );
-}
+});

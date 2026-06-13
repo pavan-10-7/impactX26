@@ -1,7 +1,8 @@
+import React from "react";
 import { motion } from "motion/react";
 import { Users, Globe2, Trophy, Rocket } from "lucide-react";
 
-export function WhyParticipate() {
+export const WhyParticipate = React.memo(function WhyParticipate() {
   const benefits = [
     {
       icon: Users,
@@ -54,7 +55,7 @@ export function WhyParticipate() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10"
+              className="group relative p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10"
             >
               {/* Glow Effect */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#60A5FA]/0 to-[#3B82F6]/0 group-hover:from-[#60A5FA]/5 group-hover:to-[#3B82F6]/5 transition-all duration-300" />
@@ -80,4 +81,4 @@ export function WhyParticipate() {
       </div>
     </section>
   );
-}
+});

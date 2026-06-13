@@ -51,7 +51,8 @@ export function Navbar() {
         <motion.nav
           animate={{ y: [-5, 5, -5] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="px-10 py-5 rounded-full backdrop-blur-[120px] bg-[#000814]/50 border border-white/[0.08] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.95),0_0_0_1px_rgba(255,255,255,0.04)_inset,0_1px_0_rgba(255,255,255,0.08)_inset]"
+          style={{ willChange: "transform" }}
+          className="px-10 py-5 rounded-full backdrop-blur-[32px] bg-[#000814]/60 border border-white/[0.08] shadow-[0_20px_40px_-10px_rgba(0,0,0,0.95),0_0_0_1px_rgba(255,255,255,0.04)_inset,0_1px_0_rgba(255,255,255,0.08)_inset]"
         >
           <div className="flex items-center gap-10">
             {navLinks.map((link) => (

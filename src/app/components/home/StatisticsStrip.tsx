@@ -1,7 +1,8 @@
+import React from "react";
 import { motion } from "motion/react";
 import { Clock, Trophy, Users, Building2, Globe } from "lucide-react";
 
-export function StatisticsStrip() {
+export const StatisticsStrip = React.memo(function StatisticsStrip() {
   const stats = [
     { icon: Clock, value: "24 Hours", label: "Hackathon" },
     { icon: Trophy, value: "₹1,00,000", label: "Prize Pool" },
@@ -34,4 +35,4 @@ export function StatisticsStrip() {
       </div>
     </section>
   );
-}
+});

@@ -1,9 +1,9 @@
+import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Button } from "../ui/button";
 import { Users, IndianRupee, Calendar, Clock } from "lucide-react";
-import { useEffect, useState } from "react";
 
-export function RegistrationSection() {
+export const RegistrationSection = React.memo(function RegistrationSection() {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -77,7 +77,7 @@ export function RegistrationSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-white/10 to-white/[0.02] backdrop-blur-xl border border-white/10 shadow-2xl"
+          className="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-white/10 to-white/[0.02] backdrop-blur-md border border-white/10 shadow-2xl"
         >
           {/* Glow Effect */}
           <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#60A5FA]/10 to-[#3B82F6]/10" />
@@ -156,4 +156,4 @@ export function RegistrationSection() {
       </div>
     </section>
   );
-}
+});

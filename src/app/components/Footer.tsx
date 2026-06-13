@@ -1,7 +1,8 @@
+import React from "react";
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter, Youtube } from "lucide-react";
 
-export function Footer() {
+export const Footer = React.memo(function Footer() {
   const socialLinks = [
     { icon: Linkedin, href: "https://www.linkedin.com/company/ieee-computer-society-rnsit", label: "LinkedIn" },
     { icon: Instagram, href: "https://www.instagram.com/computer_society_rnsit_/", label: "Instagram" },
@@ -74,13 +75,13 @@ export function Footer() {
                   key={index}
                   href={social.href}
                   aria-label={social.label}
-                  className="p-3 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#60A5FA]/20 group"
+                  className="p-3 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#60A5FA]/20 group"
                 >
                   <social.icon className="w-5 h-5 text-[#F8FAFC]/60 group-hover:text-[#60A5FA] group-hover:scale-110 transition-all" />
                 </a>
               ))}
             </div>
-            <div className="mt-6 p-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10">
+            <div className="mt-6 p-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10">
               <p className="text-sm text-[#F8FAFC]/60">
                 Stay updated with the latest announcements and event updates
               </p>
@@ -103,4 +104,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+});

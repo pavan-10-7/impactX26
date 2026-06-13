@@ -1,7 +1,8 @@
+import React from "react";
 import { motion } from "motion/react";
 import { Lightbulb, Users2, Target, TrendingUp, Award } from "lucide-react";
 
-export function AboutSection() {
+export const AboutSection = React.memo(function AboutSection() {
   const features = [
     {
       icon: Lightbulb,
@@ -72,7 +73,7 @@ export function AboutSection() {
               >
                 {/* Content */}
                 <div className={`flex-1 ${index % 2 === 0 ? "lg:text-right" : "lg:text-left"}`}>
-                  <div className={`inline-block p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 group`}>
+                  <div className={`inline-block p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 group`}>
                     <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? "lg:flex-row-reverse" : ""}`}>
                       <div className="p-3 rounded-2xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 border border-white/10 group-hover:scale-110 transition-transform duration-300">
                         <feature.icon className="w-6 h-6 text-[#60A5FA]" />
@@ -99,4 +100,4 @@ export function AboutSection() {
       </div>
     </section>
   );
-}
+});

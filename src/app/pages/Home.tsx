@@ -1,15 +1,18 @@
+import React, { Suspense } from "react";
 import { Navbar } from "../components/Navbar";
 import { HeroSection } from "../components/home/HeroSection";
 import { EventSnapshot } from "../components/home/EventSnapshot";
 import { AboutSection } from "../components/home/AboutSection";
 import { ThemesSection } from "../components/home/ThemesSection";
 import { WhyParticipate } from "../components/home/WhyParticipate";
-import { TimelineSection } from "../components/home/TimelineSection";
-import { RegistrationSection } from "../components/home/RegistrationSection";
-import { PrizePoolSection } from "../components/home/PrizePoolSection";
-import { SponsorsSection } from "../components/home/SponsorsSection";
-import { Footer } from "../components/Footer";
 import { StickyRegisterButton } from "../components/home/StickyRegisterButton";
+
+// Lazy loaded components (below the fold)
+const TimelineSection = React.lazy(() => import("../components/home/TimelineSection").then(module => ({ default: module.TimelineSection })));
+const RegistrationSection = React.lazy(() => import("../components/home/RegistrationSection").then(module => ({ default: module.RegistrationSection })));
+const PrizePoolSection = React.lazy(() => import("../components/home/PrizePoolSection").then(module => ({ default: module.PrizePoolSection })));
+const SponsorsSection = React.lazy(() => import("../components/home/SponsorsSection").then(module => ({ default: module.SponsorsSection })));
+const Footer = React.lazy(() => import("../components/Footer").then(module => ({ default: module.Footer })));
 
 export function Home() {
   return (
@@ -21,11 +24,14 @@ export function Home() {
       <EventSnapshot />
       <ThemesSection />
       <WhyParticipate />
-      <TimelineSection />
-      <RegistrationSection />
-      <PrizePoolSection />
-      <SponsorsSection />
-      <Footer />
+      
+      <Suspense fallback={<div className="h-[20vh]" />}>
+        <TimelineSection />
+        <RegistrationSection />
+        <PrizePoolSection />
+        <SponsorsSection />
+        <Footer />
+      </Suspense>
     </div>
   );
 }

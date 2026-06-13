@@ -1,7 +1,8 @@
+import React from "react";
 import { motion } from "motion/react";
 import { Shield, Network, Bot } from "lucide-react";
 
-export function ThemesSection() {
+export const ThemesSection = React.memo(function ThemesSection() {
   const themes = [
     {
       icon: Shield,
@@ -57,7 +58,7 @@ export function ThemesSection() {
               className="group relative"
             >
               {/* Card */}
-              <div className="relative h-full p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#60A5FA]/20 overflow-hidden">
+              <div className="relative h-full p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#60A5FA]/20 overflow-hidden">
                 {/* Hover Glow Effect */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${theme.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 
@@ -93,4 +94,4 @@ export function ThemesSection() {
       </div>
     </section>
   );
-}
+});
