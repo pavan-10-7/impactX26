@@ -209,7 +209,7 @@ export function Sponsor() {
     </p>
 
     <a
-      href="https://your-gallery-link"
+      href="/events#gallery"
       className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.72_0.22_255_/_0.7)] transition-transform hover:-translate-y-0.5"
     >
       View Gallery
