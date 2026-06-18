@@ -27,7 +27,7 @@ export function Team() {
         name: "Prof. Swathi Darla",
         role: "Faculty Advisor",
         department: "IEEE Computer Society",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/swathi-darla/",
         image: "/PicturesOB/Swathi.jpg",
       },
       coreTeam: [
@@ -51,7 +51,7 @@ export function Team() {
         name: "Prof. Swathi Darla",
         role: "Faculty Advisor",
         department: "IEEE Computer Society",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/swathi-darla/",
         image: "/PicturesOB/Swathi.jpg",
       },
       coreTeam: [
