@@ -11,8 +11,16 @@ export function Events() {
   const navigate = useNavigate();
 
   useEffect(() => {
+  if (window.location.hash === "#gallery") {
+    setTimeout(() => {
+      document
+        .getElementById("gallery")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  } else {
     window.scrollTo(0, 0);
-  }, []);
+  }
+}, []);
 
   const events = [
     {
@@ -183,6 +191,7 @@ export function Events() {
 
           {/* Gallery Section */}
           <motion.div
+            id="gallery"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
