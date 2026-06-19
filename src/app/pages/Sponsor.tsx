@@ -198,11 +198,7 @@ export function Sponsor() {
   tag="Our Legacy"
   title="Explore Previous Editions"
 >
-  <div className="glass-card rounded-3xl p-8 text-center">
-    <h3 className="text-3xl font-bold text-gradient">
-      Explore Previous Editions
-    </h3>
-
+  <div className="-mt-8 glass-card rounded-3xl p-8 text-center">
     <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
       Discover highlights, achievements, participant experiences,
       media coverage, and memorable moments from our previous events.

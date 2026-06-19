@@ -20,21 +20,23 @@ export function Team() {
         name: "Dr. Abhijith H V",
         role: "Head of Department",
         department: "CSE (Cyber Security)",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/abhijithhv/",
+        image: "/PicturesOB/abhijith.jpg",
       },
       facultyAdvisor: {
         name: "Prof. Swathi Darla",
         role: "Faculty Advisor",
         department: "IEEE Computer Society",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/swathi-darla/",
+        image: "/PicturesOB/Swathi.jpg",
       },
       coreTeam: [
-        { name: "Pavankumar G Aralikatti", role: "Chair", linkedin: "#" },
-        { name: "Nishita Bhat", role: "Vice Chair", linkedin: "#" },
-        { name: "Tanmayi Prashanth", role: "Secretary", linkedin: "#" },
-        { name: "Gokul S", role: "Treasurer", linkedin: "#" },
-        { name: "Bhoomika S", role: "Webmaster", linkedin: "#" },
-        { name: "Tanushree M", role: "Ex-Com", linkedin: "#" },
+        { name: "Pavankumar G Aralikatti", role: "Chair", linkedin: "https://www.linkedin.com/in/pavankumar-g-aralikatti-9715aa271/" ,image: "/PicturesOB/Pavan.jpg"},
+        { name: "Nishita Bhat", role: "Vice Chair", linkedin: "https://www.linkedin.com/in/nishita-bhat-76615b37a/",image: "/PicturesOB/Nishita.jpg" },
+        { name: "Tanmayi Prashanth", role: "Secretary", linkedin: "https://www.linkedin.com/in/tanmayi-prashanth-a4708337a/" ,image: "/PicturesOB/Tanmayi.jpg" },
+        { name: "Gokul S", role: "Treasurer", linkedin: "https://www.linkedin.com/in/gokul-infosec/" ,image: "/PicturesOB/Gokul.jpg" },
+        { name: "Bhoomika S", role: "Webmaster", linkedin: "https://www.linkedin.com/in/bhoomika-suresh/" ,image: "/PicturesOB/Bhoomika.jpg" },
+        { name: "Tanushree M", role: "Ex-Com", linkedin: "https://www.linkedin.com/in/tanushreem-064by9313/" ,image: "/PicturesOB/Tanushree.jpg" },
       ],
     },
     "2025-26": {
@@ -42,22 +44,24 @@ export function Team() {
         name: "Dr. Kiran P",
         role: "Head of Department",
         department: "CSE (Cyber Security)",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/dr-kiran-p/",
+        image: "/PicturesOB/kiran.jpg",
       },
       facultyAdvisor: {
         name: "Prof. Swathi Darla",
         role: "Faculty Advisor",
         department: "IEEE Computer Society",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/swathi-darla/",
+        image: "/PicturesOB/Swathi.jpg",
       },
       coreTeam: [
-        { name: "Nithyashree", role: "Chair", linkedin: "#" },
-        { name: "Siri V Hegde", role: "Vice Chair", linkedin: "#" },
-        { name: "Dev Kukreja", role: "Secretary", linkedin: "#" },
-        { name: "Mukund", role: "Treasurer", linkedin: "#" },
-        { name: "Anirudh M", role: "Joint Treasurer", linkedin: "#" },
-        { name: "Rithika", role: "Webmaster", linkedin: "#" },
-        { name: "Chetana", role: "Ex-Com", linkedin: "#" },
+        { name: "Nithyashree", role: "Chair", linkedin: "https://www.linkedin.com/in/nithyashree-ramesh/" ,image: "/PicturesOB/nithyashree.jpg" },
+        { name: "Siri V Hegde", role: "Vice Chair", linkedin: "https://www.linkedin.com/in/siri-v-hegde-42ba3827b/",image: "/PicturesOB/siri.jpg" },
+        { name: "Dev Kukreja", role: "Secretary", linkedin: "https://www.linkedin.com/in/dev-kukreja-355512291/",image: "/PicturesOB/dev.jpg" },
+        { name: "Mukund", role: "Treasurer", linkedin: "https://www.linkedin.com/in/mukund-v-b1b742175/" ,image: "/PicturesOB/mukund.jpg" },
+        { name: "Anirudh M", role: "Joint Treasurer", linkedin: "https://www.linkedin.com/in/anirudh-gm/" ,image: "/PicturesOB/anirudh.jpg" },
+        { name: "Rithika", role: "Webmaster", linkedin: "https://www.linkedin.com/in/rithika-shetty-11b4342a7/" ,image: "/PicturesOB/rithika.jpg" },
+        { name: "Chetana", role: "Ex-Com", linkedin: "https://www.linkedin.com/in/chethana-r-2o23l/" ,image: "/PicturesOB/chethana.jpg" },
       ],
     },
   };
@@ -78,10 +82,21 @@ export function Team() {
 
         <div className="relative z-10">
           {/* Photo Placeholder */}
-          <div className={`${isLarge ? "w-32 h-32" : "w-24 h-24"} mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 border border-white/10 flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
-            <div className="text-[#F8FAFC]/30 text-xs">Photo</div>
-          </div>
-
+          <div
+  className={`${isLarge ? "w-32 h-32" : "w-24 h-24"} mx-auto mb-4 overflow-hidden rounded-2xl border border-white/10 group-hover:scale-105 transition-transform duration-300`}
+>
+  {member.image ? (
+    <img
+      src={member.image}
+      alt={member.name}
+      className="w-full h-full object-cover"
+    />
+  ) : (
+    <div className="w-full h-full bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 flex items-center justify-center">
+      <span className="text-[#F8FAFC]/30 text-xs">Photo</span>
+    </div>
+  )}
+</div>
           {/* Name */}
           <h3 className={`${isLarge ? "text-xl" : "text-lg"} font-semibold text-[#F8FAFC] text-center mb-1`}>
             {member.name}
@@ -102,13 +117,14 @@ export function Team() {
           {/* LinkedIn */}
           {member.linkedin && (
             <div className="flex justify-center mt-4">
-              <a
-                href={member.linkedin}
-                className="p-2 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:scale-110"
-                aria-label="LinkedIn Profile"
+             <a
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:scale-110"
               >
-                <Linkedin className="w-4 h-4 text-[#60A5FA]" />
-              </a>
+              <Linkedin className="w-4 h-4 text-[#60A5FA]" />
+            </a>
             </div>
           )}
         </div>
