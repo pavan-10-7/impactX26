@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useEffect } from "react";
+import { Link } from "react-router";
 import {
   Briefcase,
   Mail,
@@ -212,13 +213,13 @@ export function Sponsor() {
       media coverage, and memorable moments from our previous events.
     </p>
 
-    <a
-      href="/events#gallery"
-      className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.72_0.22_255_/_0.7)] transition-transform hover:-translate-y-0.5"
+    <Link
+    to="/events#gallery"
+    className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.72_0.22_255_/_0.7)] transition-transform hover:-translate-y-0.5"
     >
       View Gallery
       <ArrowRight className="size-4" />
-    </a>
+    </Link>
   </div>
 </Section>
       {/* CONTACT */}
