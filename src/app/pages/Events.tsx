@@ -5,7 +5,7 @@ import { Calendar, Users, MapPin, Trophy, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { CoverflowGallery } from "../components/ui/CoverflowGallery";
-import { useLocation } from "react-router-dom";
+//import { useLocation } from "react-router-dom";
 
 
 
@@ -209,7 +209,6 @@ export function Events() {
 
           {/* Gallery Section */}
           <motion.div
-            id="gallery"
             id="gallery"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

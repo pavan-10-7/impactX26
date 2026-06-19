@@ -1,7 +1,12 @@
 import { motion } from "motion/react";
 
+interface Sponsor {
+  name: string;
+  size?: string;
+}
+
 export function SponsorsSection() {
-  const sponsorCategories = [
+  const sponsorCategories: { title: string; sponsors: Sponsor[] }[] = [
     {
       title: "Title Sponsor",
       sponsors: [{ name: "Title Sponsor", size: "large" }],
