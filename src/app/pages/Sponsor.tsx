@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { useEffect } from "react";
 import {
   Briefcase,
   Mail,
@@ -39,8 +40,15 @@ function GlowOrb({ className = "" }: { className?: string }) {
   );
 }
 export function Sponsor() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant" as ScrollBehavior,
+    });
+  }, []);
+
   return (
-    <main className="relative min-h-screen overflow-x-hidden pb-32">
+    <main className="relative min-h-screen overflow-x-hidden">
       <Navbar />
 
       {/* Background grid */}
@@ -292,16 +300,8 @@ export function Sponsor() {
             </div>
           </div>
         </motion.div>
-
-        <div className="mx-auto mt-12 flex max-w-5xl flex-wrap items-center justify-between gap-4 px-2 text-xs text-muted-foreground">
-          <div>© ImpactX '26 · IEEE Computer Society, RNSIT</div>
-          <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-foreground"><Linkedin className="size-4" /></a>
-            <a href="#" className="hover:text-foreground"><Instagram className="size-4" /></a>
-            <a href="#" className="hover:text-foreground"><Globe className="size-4" /></a>
-          </div>
-        </div>
       </section>
+      <Footer />
     </main>
   );
 }
