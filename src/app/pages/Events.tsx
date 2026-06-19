@@ -5,14 +5,38 @@ import { Calendar, Users, MapPin, Trophy, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { CoverflowGallery } from "../components/ui/CoverflowGallery";
+//import { useLocation } from "react-router-dom";
+
+
 
 export function Events() {
   const [selectedEvent, setSelectedEvent] = useState<number | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const scrollToHash = () => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const timeout = setTimeout(scrollToHash, 300);
+
+  return () => clearTimeout(timeout);
+}, [location]);
 
   const events = [
     {
@@ -44,6 +68,8 @@ export function Events() {
       link: "https://ieeecsrnsit.netlify.app/impactx",
     },
   ];
+
+  
 
   // Gallery images from previous events
   const galleryImages = [
@@ -183,6 +209,7 @@ export function Events() {
 
           {/* Gallery Section */}
           <motion.div
+            id="gallery"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

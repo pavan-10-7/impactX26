@@ -1,8 +1,13 @@
 import React from "react";
 import { motion } from "motion/react";
 
-export const SponsorsSection = React.memo(function SponsorsSection() {
-  const sponsorCategories = [
+interface Sponsor {
+  name: string;
+  size?: string;
+}
+
+export function SponsorsSection() {
+  const sponsorCategories: { title: string; sponsors: Sponsor[] }[] = [
     {
       title: "Title Sponsor",
       sponsors: [{ name: "Title Sponsor", size: "large" }],

@@ -79,3 +79,5 @@ The optimized static files will be generated in the `dist` folder, ready to be d
 ## 📄 License
 
 This project is maintained by IEEE Computer Society RNSIT. All rights reserved.
+=======
+# impactX26
