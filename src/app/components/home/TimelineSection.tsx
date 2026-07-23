@@ -7,25 +7,25 @@ export const TimelineSection = React.memo(function TimelineSection() {
     {
       icon: Calendar,
       title: "Registrations Open",
-      date: "August 2026",
+      date: "10th August 2026",
       description: "Register your team and get ready for the challenge",
     },
     {
       icon: UserCheck,
       title: "Shortlisting Round",
-      date: "September 2026",
+      date: "21st - 27th September 2026",
       description: "Teams will be shortlisted based on online idea submission",
     },
     {
       icon: Trophy,
       title: "Finalist Announcement",
-      date: "October 2026",
+      date: "28th -29th September 2026",
       description: "Selected teams will participate in the final offline round",
     },
     {
       icon: Code,
       title: "Hackathon Day",
-      date: "October 2026",
+      date: "8th -9th October 2026",
       description: "24 hours of intense coding, building, and innovation",
     },
   ];

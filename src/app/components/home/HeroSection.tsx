@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { ChevronDown } from "lucide-react";
 import { HeroSequence } from "./HeroSequence";
 import { useRef, useCallback } from "react";
+import { useNavigate } from "react-router";
 
 export function HeroSection() {
   const containerRef = useRef<HTMLElement>(null);
@@ -11,13 +12,15 @@ export function HeroSection() {
     offset: ["start start", "end end"]
   });
 
+  const navigate = useNavigate();
+
   const handleScrollToThemes = useCallback(() => {
-    document.querySelector("#themes")?.scrollIntoView({ behavior: "smooth" });
-  }, []);
+    navigate("/events");
+  }, [navigate]);
 
   const handleScrollToRegistration = useCallback(() => {
-    document.querySelector("#registration")?.scrollIntoView({ behavior: "smooth" });
-  }, []);
+    navigate("/sponsor#contact");
+  }, [navigate]);
 
   return (
     <section ref={containerRef} className="relative h-[2000px]">
@@ -44,9 +47,12 @@ export function HeroSection() {
               IMPACTX 26
             </h1>
 
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-[#F8FAFC] max-w-3xl">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-3 text-[#F8FAFC] max-w-3xl">
               24-Hour National Level Offline Hackathon
             </h2>
+            <div className="text-xl md:text-2xl font-medium mb-6 text-[#60A5FA]">
+              8th & 9th October, 2026
+            </div>
 
             <p className="text-lg md:text-xl text-[#F8FAFC]/70 mb-12 max-w-2xl">
               Presented by IEEE Computer Society RNSIT and Department of CSE (Cyber Security)
@@ -57,14 +63,14 @@ export function HeroSection() {
                 onClick={handleScrollToRegistration}
                 className="bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] text-black font-semibold px-10 py-7 text-lg md:text-xl rounded-full shadow-xl shadow-[#60A5FA]/20 hover:shadow-[#60A5FA]/50 transition-all duration-300 hover:scale-105"
               >
-                Register Now
+                Contact Us
               </Button>
               <Button
                 onClick={handleScrollToThemes}
                 variant="outline"
                 className="border-[#60A5FA]/50 text-[#60A5FA] px-10 py-7 text-lg md:text-xl rounded-full backdrop-blur-sm bg-white/5 hover:bg-white/10 transition-all duration-300"
               >
-                Explore Themes
+                View Past Events
               </Button>
             </div>
 
