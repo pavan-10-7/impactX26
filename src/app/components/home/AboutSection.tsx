@@ -32,7 +32,7 @@ export const AboutSection = React.memo(function AboutSection() {
   ];
 
   return (
-    <section id="about" className="relative py-24 overflow-hidden">
+    <section id="about" className="relative py-16 lg:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#000814] to-[#020617]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.1),transparent_50%)]" />
 
@@ -44,10 +44,10 @@ export const AboutSection = React.memo(function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent">
             About ImpactX
           </h2>
-          <p className="text-lg text-[#F8FAFC]/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-[#F8FAFC]/70 max-w-3xl mx-auto leading-relaxed">
             ImpactX 26 is where innovation meets opportunity. A national-level hackathon
             that brings together the brightest minds to build solutions that matter. Over 24 hours,
             participants will collaborate, innovate, and compete to create impactful technology solutions
@@ -60,7 +60,7 @@ export const AboutSection = React.memo(function AboutSection() {
           {/* Center Line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#60A5FA]/50 to-transparent hidden lg:block" />
 
-          <div className="space-y-16">
+          <div className="space-y-8 lg:space-y-16">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -73,7 +73,7 @@ export const AboutSection = React.memo(function AboutSection() {
               >
                 {/* Content */}
                 <div className={`flex-1 ${index % 2 === 0 ? "lg:text-right" : "lg:text-left"}`}>
-                  <div className={`inline-block p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 group`}>
+                  <div className={`inline-block p-6 lg:p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 group`}>
                     <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? "lg:flex-row-reverse" : ""}`}>
                       <div className="p-3 rounded-2xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 border border-white/10 group-hover:scale-110 transition-transform duration-300">
                         <feature.icon className="w-6 h-6 text-[#60A5FA]" />

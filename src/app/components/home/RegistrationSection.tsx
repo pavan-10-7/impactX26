@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Button } from "../ui/button";
-import { Users, IndianRupee, Calendar, Clock } from "lucide-react";
+import { Users, IndianRupee, Calendar, Clock, AlignCenter } from "lucide-react";
 
 export const RegistrationSection = React.memo(function RegistrationSection() {
   const [timeLeft, setTimeLeft] = useState({
@@ -51,7 +51,7 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
   ];
 
   return (
-    <section id="registration" className="relative py-24 overflow-hidden">
+    <section id="registration" className="relative py-16 lg:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#000814] to-[#020617]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(96,165,250,0.15),transparent_60%)]" />
 
@@ -63,7 +63,7 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent">
             Registration
           </h2>
           <p className="text-lg text-[#F8FAFC]/60">
@@ -77,7 +77,7 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-white/10 to-white/[0.02] backdrop-blur-md border border-white/10 shadow-2xl"
+          className="relative p-6 md:p-12 rounded-3xl bg-gradient-to-br from-white/10 to-white/[0.02] backdrop-blur-md border border-white/10 shadow-2xl"
         >
           {/* Glow Effect */}
           <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#60A5FA]/10 to-[#3B82F6]/10" />
@@ -89,18 +89,18 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
                 <Clock className="w-5 h-5 text-[#60A5FA]" />
                 <h3 className="text-xl font-semibold text-[#F8FAFC]">Registration Closes In</h3>
               </div>
-              <div className="grid grid-cols-4 gap-4 max-w-2xl mx-auto">
+              <div className="grid grid-cols-4 gap-2 md:gap-4 max-w-2xl mx-auto">
                 {[
-                  { label: "Days", value: timeLeft.days },
-                  { label: "Hours", value: timeLeft.hours },
-                  { label: "Minutes", value: timeLeft.minutes },
-                  { label: "Seconds", value: timeLeft.seconds },
+                  { label: "Days", value: timeLeft.days, align: 'centre' },
+                  { label: "Hours", value: timeLeft.hours, align: 'centre' },
+                  { label: "Min", value: timeLeft.minutes, align: 'centre' },
+                  { label: "Sec", value: timeLeft.seconds, align: 'centre' },
                 ].map((item, index) => (
                   <div
                     key={index}
                     className="p-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10"
                   >
-                    <div className="text-3xl md:text-4xl font-bold text-[#60A5FA] mb-1">
+                    <div className="text-2xl md:text-4xl font-bold text-[#60A5FA] mb-1">
                       {String(item.value).padStart(2, "0")}
                     </div>
                     <div className="text-xs text-[#F8FAFC]/60 uppercase tracking-wide">
@@ -112,7 +112,7 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
             </div>
 
             {/* Registration Details */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8">
               {registrationDetails.map((detail, index) => (
                 <div
                   key={index}

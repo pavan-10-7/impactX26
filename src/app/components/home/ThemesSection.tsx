@@ -28,7 +28,7 @@ export const ThemesSection = React.memo(function ThemesSection() {
   ];
 
   return (
-    <section id="themes" className="relative py-24 overflow-hidden">
+    <section id="themes" className="relative py-16 lg:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(96,165,250,0.08),transparent_60%)]" />
       
       <div className="relative max-w-7xl mx-auto px-6">
@@ -39,10 +39,10 @@ export const ThemesSection = React.memo(function ThemesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent">
             Hackathon Themes
           </h2>
-          <p className="text-lg text-[#F8FAFC]/60 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-[#F8FAFC]/60 max-w-2xl mx-auto">
             Choose your track and build cutting-edge solutions in emerging technologies
           </p>
         </motion.div>
@@ -58,7 +58,7 @@ export const ThemesSection = React.memo(function ThemesSection() {
               className="group relative"
             >
               {/* Card */}
-              <div className="relative h-full p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#60A5FA]/20 overflow-hidden">
+              <div className="relative h-full p-6 lg:p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#60A5FA]/20 overflow-hidden">
                 {/* Hover Glow Effect */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${theme.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 

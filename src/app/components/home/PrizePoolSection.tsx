@@ -49,7 +49,7 @@ export const PrizePoolSection = React.memo(function PrizePoolSection() {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-16 lg:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(96,165,250,0.12),transparent_60%)]" />
 
       <div className="relative max-w-7xl mx-auto px-6">
@@ -60,10 +60,10 @@ export const PrizePoolSection = React.memo(function PrizePoolSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent">
             Prize Pool
           </h2>
-          <p className="text-lg text-[#F8FAFC]/60 mb-8">
+          <p className="text-base md:text-lg text-[#F8FAFC]/60 mb-8">
             Win exciting cash prizes and recognition
           </p>
 
@@ -75,7 +75,7 @@ export const PrizePoolSection = React.memo(function PrizePoolSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-block relative mb-12"
           >
-            <div className="relative p-12 rounded-3xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 backdrop-blur-md border border-[#60A5FA]/30 shadow-2xl">
+            <div className="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 backdrop-blur-md border border-[#60A5FA]/30 shadow-2xl">
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4">
                 <Sparkles className="w-8 h-8 text-[#60A5FA]" />
@@ -84,13 +84,13 @@ export const PrizePoolSection = React.memo(function PrizePoolSection() {
                 <Sparkles className="w-8 h-8 text-[#3B82F6]" />
               </div>
               
-              <div className="flex items-center justify-center gap-4 mb-4">
-                <Trophy className="w-12 h-12 text-[#60A5FA]" />
-                <div className="text-6xl font-bold bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] bg-clip-text text-transparent">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mb-4">
+                <Trophy className="w-10 h-10 md:w-12 md:h-12 text-[#60A5FA]" />
+                <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] bg-clip-text text-transparent">
                   <AnimatedNumber value={100000} />
                 </div>
               </div>
-              <div className="text-xl text-[#F8FAFC]/80">Total Prize Pool</div>
+              <div className="text-lg md:text-xl text-[#F8FAFC]/80">Total Prize Pool</div>
             </div>
           </motion.div>
         </motion.div>
@@ -142,21 +142,21 @@ export const PrizePoolSection = React.memo(function PrizePoolSection() {
           >
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#60A5FA]/0 to-[#3B82F6]/0 group-hover:from-[#60A5FA]/5 group-hover:to-[#3B82F6]/5 transition-all duration-300" />
             
-            <div className="relative z-10 flex items-center gap-6 flex-col md:flex-row">
+            <div className="relative z-10 flex items-center gap-4 md:gap-6 flex-col md:flex-row">
               <div className="p-4 rounded-2xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 border border-white/10 group-hover:scale-110 transition-transform duration-300">
-                <Star className="w-10 h-10 text-[#60A5FA]" />
+                <Star className="w-8 h-8 md:w-10 md:h-10 text-[#60A5FA]" />
               </div>
               <div>
-                <h3 className="text-2xl font-semibold text-[#F8FAFC] mb-1">
+                <h3 className="text-xl md:text-2xl font-semibold text-[#F8FAFC] mb-1">
                   Best Unique Solution
                 </h3>
-                <p className="text-base text-[#F8FAFC]/60">
+                <p className="text-sm md:text-base text-[#F8FAFC]/60">
                   Most innovative approach across all tracks
                 </p>
               </div>
             </div>
             
-            <div className="relative z-10 text-5xl font-bold text-[#60A5FA]">
+            <div className="relative z-10 text-4xl md:text-5xl font-bold text-[#60A5FA]">
               ₹10,000
             </div>
           </motion.div>
