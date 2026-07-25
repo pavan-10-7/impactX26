@@ -61,12 +61,12 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12 flex flex-col items-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent w-full">
             Registration
           </h2>
-          <p className="text-lg text-[#F8FAFC]/60">
+          <p className="text-sm sm:text-base md:text-lg text-[#F8FAFC]/60 max-w-[280px] sm:max-w-md md:max-w-none mx-auto leading-relaxed">
             Secure your spot in India's most prestigious hackathon
           </p>
         </motion.div>
@@ -85,9 +85,9 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
           <div className="relative z-10">
             {/* Countdown Timer */}
             <div className="mb-8">
-              <div className="flex items-center justify-center gap-2 mb-6">
-                <Clock className="w-5 h-5 text-[#60A5FA]" />
-                <h3 className="text-xl font-semibold text-[#F8FAFC]">Registration Closes In</h3>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-6">
+                <Clock className="w-5 h-5 text-[#60A5FA] hidden sm:block" />
+                <h3 className="text-lg sm:text-xl font-semibold text-[#F8FAFC] text-center">Registration Closes In</h3>
               </div>
               <div className="grid grid-cols-4 gap-2 md:gap-4 max-w-2xl mx-auto">
                 {[
@@ -98,7 +98,7 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="p-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10"
+                    className="flex flex-col items-center justify-center text-center p-4 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10"
                   >
                     <div className="text-2xl md:text-4xl font-bold text-[#60A5FA] mb-1">
                       {String(item.value).padStart(2, "0")}
