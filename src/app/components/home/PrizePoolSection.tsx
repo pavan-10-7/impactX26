@@ -60,10 +60,10 @@ export const PrizePoolSection = React.memo(function PrizePoolSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent">
             Prize Pool
           </h2>
-          <p className="text-lg text-[#F8FAFC]/60 mb-8">
+          <p className="text-base md:text-lg text-[#F8FAFC]/60 mb-8">
             Win exciting cash prizes and recognition
           </p>
 
@@ -75,7 +75,7 @@ export const PrizePoolSection = React.memo(function PrizePoolSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-block relative mb-12"
           >
-            <div className="relative p-12 rounded-3xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 backdrop-blur-md border border-[#60A5FA]/30 shadow-2xl">
+            <div className="relative p-6 md:p-12 rounded-3xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 backdrop-blur-md border border-[#60A5FA]/30 shadow-2xl">
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4">
                 <Sparkles className="w-8 h-8 text-[#60A5FA]" />
@@ -84,13 +84,13 @@ export const PrizePoolSection = React.memo(function PrizePoolSection() {
                 <Sparkles className="w-8 h-8 text-[#3B82F6]" />
               </div>
               
-              <div className="flex items-center justify-center gap-4 mb-4">
-                <Trophy className="w-12 h-12 text-[#60A5FA]" />
-                <div className="text-6xl font-bold bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] bg-clip-text text-transparent">
+              <div className="flex items-center justify-center gap-2 md:gap-4 mb-4">
+                <Trophy className="w-8 h-8 md:w-12 md:h-12 text-[#60A5FA] flex-shrink-0" />
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold leading-none bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] bg-clip-text text-transparent">
                   <AnimatedNumber value={100000} />
                 </div>
               </div>
-              <div className="text-xl text-[#F8FAFC]/80">Total Prize Pool</div>
+              <div className="text-lg md:text-xl text-[#F8FAFC]/80">Total Prize Pool</div>
             </div>
           </motion.div>
         </motion.div>
