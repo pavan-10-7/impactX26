@@ -58,26 +58,26 @@ export const ThemesSection = React.memo(function ThemesSection() {
               className="group relative"
             >
               {/* Card */}
-              <div className="relative h-full p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#60A5FA]/20 overflow-hidden">
+              <div className="relative h-full p-6 md:p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#60A5FA]/20 overflow-hidden">
                 {/* Hover Glow Effect */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${theme.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="mb-6 p-4 w-fit rounded-2xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 border border-white/10 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                    <theme.icon className="w-8 h-8 text-[#60A5FA]" />
+                  <div className="mb-5 p-3 md:p-4 w-fit rounded-2xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 border border-white/10 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <theme.icon className="w-7 h-7 md:w-8 md:h-8 text-[#60A5FA]" />
                   </div>
 
-                  <h3 className="text-2xl font-bold text-[#F8FAFC] mb-4 group-hover:text-[#60A5FA] transition-colors duration-300">
+                  <h3 className="text-xl md:text-2xl font-bold text-[#F8FAFC] mb-4 group-hover:text-[#60A5FA] transition-colors duration-300">
                     {theme.title}
                   </h3>
 
-                  <p className="text-[#F8FAFC]/70 leading-relaxed">
+                  <p className="text-sm md:text-base text-[#F8FAFC]/70 leading-relaxed">
                     {theme.description}
                   </p>
 
                   {/* Arrow indicator */}
-                  <div className="mt-6 flex items-center gap-2 text-[#60A5FA] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-2">
+                  <div className="hidden md:flex mt-6 items-center gap-2 text-[#60A5FA] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-2">
                     <span className="text-sm font-medium">Explore Track</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -86,7 +86,7 @@ export const ThemesSection = React.memo(function ThemesSection() {
                 </div>
 
                 {/* Decorative Elements */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#60A5FA]/10 to-transparent rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+                <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-[#60A5FA]/10 to-transparent rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
               </div>
             </motion.div>
           ))}
