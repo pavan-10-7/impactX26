@@ -46,7 +46,7 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
     {
       icon: Calendar,
       label: "Registration Deadline",
-      value: "September 20, 2026",
+      value: "October 2, 2026",
     },
   ];
 
@@ -87,7 +87,7 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
             <div className="mb-8">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-6">
                 <Clock className="w-5 h-5 text-[#60A5FA] hidden sm:block" />
-                <h3 className="text-lg sm:text-xl font-semibold text-[#F8FAFC] text-center">Registration Closes In</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-[#F8FAFC] text-center">The Countdown Begins</h3>
               </div>
               <div className="grid grid-cols-4 gap-2 md:gap-4 max-w-2xl mx-auto">
                 {[
@@ -133,11 +133,11 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
             <div className="mb-8 p-6 rounded-2xl bg-gradient-to-r from-[#60A5FA]/10 to-[#3B82F6]/10 border border-[#60A5FA]/20">
               <h4 className="text-sm font-semibold text-[#60A5FA] mb-2">Important Information</h4>
               <ul className="text-sm text-[#F8FAFC]/70 space-y-2">
-                <li>• Teams will be shortlisted based on idea submissions</li>
-                <li>• Selected teams will receive confirmation via email</li>
-                <li>• Registration deadline will not be extended</li>
-                <li>• All team members must be current students (B.E/B.Tech/MCA)</li>
-              </ul>
+              <li>• All team members must be current students (B.E/B.Tech/MCA)</li>
+              <li>• Each team must have 2–4 members</li>
+              <li>• Registration closes on 2nd October 2026</li>
+              <li>• The hackathon will be conducted offline at RNSIT, Bangalore</li>
+            </ul>
             </div>
 
             {/* CTA Button */}

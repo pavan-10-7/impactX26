@@ -11,12 +11,15 @@ export const Footer = React.memo(function Footer() {
 
   const contactInfo = [
     { icon: Mail, text: "ieeecsrns@gmail.com", href: "mailto:ieeecsrns@gmail.com" },
-    { icon: Phone, text: "+91 XXXXX XXXXX", href: "tel:+91XXXXXXXXXX" },
+    { icon: Phone, text: "+91 72591 05691", href: "tel:+917259105691" },
     { icon: MapPin, text: "RNS Institute of Technology, Bangalore", href: "https://maps.app.goo.gl/1aRCvjL3bGrP8FLA9" },
   ];
 
   return (
-    <footer className="relative py-16 border-t border-white/10 bg-gradient-to-b from-[#020617] to-[#000814] overflow-hidden">
+    <footer
+  id="contact"
+  className="relative py-16 border-t border-white/10 bg-gradient-to-b from-[#020617] to-[#000814] overflow-hidden"
+>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(96,165,250,0.05),transparent_50%)]" />
 
       <div className="relative max-w-7xl mx-auto px-6">

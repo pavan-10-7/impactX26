@@ -14,13 +14,9 @@ export function HeroSection() {
 
   const navigate = useNavigate();
 
-  const handleScrollToThemes = useCallback(() => {
-    navigate("/events");
-  }, [navigate]);
-
   const handleScrollToRegistration = useCallback(() => {
-    navigate("/sponsor#contact");
-  }, [navigate]);
+  navigate("/#registration");
+}, [navigate]);
 
   return (
     <section ref={containerRef} className="relative h-[2000px]">
@@ -51,28 +47,21 @@ export function HeroSection() {
               24-Hour National Level Offline Hackathon
             </h2>
             <div className="text-lg md:text-2xl font-medium mb-6 text-[#60A5FA]">
-              8th & 9th October, 2026
+              9th & 10th October, 2026
             </div>
 
             <p className="text-base md:text-xl text-[#F8FAFC]/70 mb-10 md:mb-12 max-w-2xl">
               Presented by IEEE Computer Society RNSIT and Department of CSE (Cyber Security)
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-start w-full">
-              <Button
-                onClick={handleScrollToRegistration}
-                className="bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] text-black font-semibold px-8 py-6 md:px-10 md:py-7 text-base md:text-xl rounded-full shadow-xl shadow-[#60A5FA]/20 hover:shadow-[#60A5FA]/50 transition-all duration-300 hover:scale-105"
+            <div className="flex justify-start w-full">
+            <Button
+              onClick={handleScrollToRegistration}
+              className="bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] text-black font-semibold px-10 py-6 md:px-12 md:py-7 text-base md:text-xl rounded-full shadow-xl shadow-[#60A5FA]/20 hover:shadow-[#60A5FA]/50 transition-all duration-300 hover:scale-105"
               >
-                Contact Us
+              Register Now
               </Button>
-              <Button
-                onClick={handleScrollToThemes}
-                variant="outline"
-                className="border-[#60A5FA]/50 text-[#60A5FA] px-8 py-6 md:px-10 md:py-7 text-base md:text-xl rounded-full backdrop-blur-sm bg-white/5 hover:bg-white/10 transition-all duration-300"
-              >
-                View Past Events
-              </Button>
-            </div>
+              </div>
 
             {/* Scroll Indicator */}
             <div className="mt-[10vh] flex flex-col items-start gap-2 text-[#F8FAFC]/50">

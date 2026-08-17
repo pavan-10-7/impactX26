@@ -12,7 +12,17 @@ import { StickyRegisterButton } from "../components/home/StickyRegisterButton";
 const TimelineSection = React.lazy(() => import("../components/home/TimelineSection").then(module => ({ default: module.TimelineSection })));
 const RegistrationSection = React.lazy(() => import("../components/home/RegistrationSection").then(module => ({ default: module.RegistrationSection })));
 const PrizePoolSection = React.lazy(() => import("../components/home/PrizePoolSection").then(module => ({ default: module.PrizePoolSection })));
+const FAQSection = React.lazy(() =>
+  import("../components/home/FAQSection").then(module => ({
+    default: module.FAQSection,
+  }))
+);
 const SponsorsSection = React.lazy(() => import("../components/home/SponsorsSection").then(module => ({ default: module.SponsorsSection })));
+const ContactSection = React.lazy(() =>
+  import("../components/home/ContactSection").then((module) => ({
+    default: module.ContactSection,
+  }))
+);
 const Footer = React.lazy(() => import("../components/Footer").then(module => ({ default: module.Footer })));
 
 export function Home() {
@@ -45,7 +55,9 @@ export function Home() {
         <TimelineSection />
         <RegistrationSection />
         <PrizePoolSection />
+        <FAQSection />
         <SponsorsSection />
+        <ContactSection />
         <Footer />
       </Suspense>
     </div>

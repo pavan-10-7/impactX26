@@ -4,31 +4,25 @@ import { Calendar, UserCheck, Trophy, Code } from "lucide-react";
 
 export const TimelineSection = React.memo(function TimelineSection() {
   const timeline = [
-    {
-      icon: Calendar,
-      title: "Registrations Open",
-      date: "10th August 2026",
-      description: "Register your team and get ready for the challenge",
-    },
-    {
-      icon: UserCheck,
-      title: "Shortlisting Round",
-      date: "21st - 27th September 2026",
-      description: "Teams will be shortlisted based on online idea submission",
-    },
-    {
-      icon: Trophy,
-      title: "Finalist Announcement",
-      date: "28th -29th September 2026",
-      description: "Selected teams will participate in the final offline round",
-    },
-    {
-      icon: Code,
-      title: "Hackathon Day",
-      date: "8th -9th October 2026",
-      description: "24 hours of intense coding, building, and innovation",
-    },
-  ];
+  {
+    icon: Calendar,
+    title: "Registrations Open",
+    date: "",
+    description: "Register your team and get ready for the challenge",
+  },
+  {
+    icon: Calendar,
+    title: "Registration Closes",
+    date: "2nd October 2026",
+    description: "Last date to register your team for ImpactX 26",
+  },
+  {
+    icon: Code,
+    title: "Hackathon Day",
+    date: "9th - 10th October 2026",
+    description: "24 hours of intense coding, building, and innovation",
+  },
+];
 
   return (
     <section className="relative py-16 lg:py-24 overflow-hidden">
