@@ -5,7 +5,7 @@ import { Mail, MessageCircle, Linkedin } from "lucide-react";
 const contactPeople = [
   {
     role: "IEEE Chair",
-    name: "Pavan Kumar G Aralikatti",
+    name: "Pavankumar G Aralikatti",
     email: "pavankumargarallikatti24cy@rnsit.ac.in",
     whatsapp: "917259105691",
     linkedin: "https://www.linkedin.com/in/pavankumar-g-aralikatti-9715aa271/",
@@ -75,17 +75,17 @@ export const ContactSection = React.memo(function ContactSection() {
                 </a>
 
                 <a
-                     href={`https://wa.me/${person.whatsapp}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`WhatsApp ${person.name}`}
-                        className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10 hover:border-[#60A5FA]/40 transition-all"
-                    >
-                        <MessageCircle className="w-5 h-5 text-[#60A5FA]" />
-                        <span className="text-sm text-[#F8FAFC]/70">
-                         WhatsApp
-                        </span>
-                    </a>
+                  href={`https://wa.me/${person.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`WhatsApp ${person.name}`}
+                  className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10 hover:border-[#60A5FA]/40 transition-all"
+                >
+                  <MessageCircle className="w-5 h-5 text-[#60A5FA]" />
+                  <span className="text-sm text-[#F8FAFC]/70">
+                    WhatsApp
+                  </span>
+                </a>
 
                 <a
                   href={person.linkedin}

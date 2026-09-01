@@ -4,13 +4,18 @@ import { motion } from "motion/react";
 interface Sponsor {
   name: string;
   size?: string;
+  logoUrl?: string;
 }
 
 export function SponsorsSection() {
   const sponsorCategories: { title: string; sponsors: Sponsor[] }[] = [
   {
+    title: "Title Sponsor",
+    sponsors: [{ name: "Title Sponsor", size: "large", logoUrl: "https://via.placeholder.com/220x80/1a1a1a/60A5FA?text=Title+Sponsor" }],
+  },
+  {
     title: "Platform Partner",
-    sponsors: [{ name: "Hack2Skill", size: "large" }],
+    sponsors: [{ name: "Hack2Skill", size: "large", logoUrl: "/H2S_White_Logo.png" }],
   },
 ];
 
@@ -70,8 +75,8 @@ export function SponsorsSection() {
                     <div className="relative flex items-center justify-center h-full">
                       <div className="text-center">
                         <img
-                        src="/Hack2Skill_logo.png"
-                        alt="Hack2Skill"
+                        src={sponsor.logoUrl || `https://via.placeholder.com/220x80/1a1a1a/60A5FA?text=${encodeURIComponent(sponsor.name)}`}
+                        alt={sponsor.name}
                         className="max-h-20 max-w-[220px] object-contain mx-auto"
                         />
                       </div>

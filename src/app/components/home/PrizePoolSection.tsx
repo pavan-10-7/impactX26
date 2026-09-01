@@ -31,19 +31,19 @@ export const PrizePoolSection = React.memo(function PrizePoolSection() {
     {
       icon: Trophy,
       title: "Track Winner 1",
-      amount: "₹30,000",
+      amount: "₹25,000",
       description: "Cybersecurity & Blockchain",
     },
     {
       icon: Trophy,
       title: "Track Winner 2",
-      amount: "₹30,000",
+      amount: "₹25,000",
       description: "Model Context Protocol",
     },
     {
       icon: Trophy,
       title: "Track Winner 3",
-      amount: "₹30,000",
+      amount: "₹25,000",
       description: "Agentic AI",
     },
   ];
@@ -87,7 +87,7 @@ export const PrizePoolSection = React.memo(function PrizePoolSection() {
               <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mb-4">
                 <Trophy className="w-10 h-10 md:w-12 md:h-12 text-[#60A5FA]" />
                 <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] bg-clip-text text-transparent">
-                  <AnimatedNumber value={100000} />
+                  <AnimatedNumber value={75000} />
                 </div>
               </div>
               <div className="text-lg md:text-xl text-[#F8FAFC]/80">Total Prize Pool</div>
@@ -148,16 +148,12 @@ export const PrizePoolSection = React.memo(function PrizePoolSection() {
               </div>
               <div>
                 <h3 className="text-xl md:text-2xl font-semibold text-[#F8FAFC] mb-1">
-                  Best Unique Solution
+                  Sponsor Specific Track Winner
                 </h3>
                 <p className="text-sm md:text-base text-[#F8FAFC]/60">
                   Most innovative approach across all tracks
                 </p>
               </div>
-            </div>
-            
-            <div className="relative z-10 text-4xl md:text-5xl font-bold text-[#60A5FA]">
-              ₹10,000
             </div>
           </motion.div>
         </div>

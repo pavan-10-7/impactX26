@@ -4,25 +4,25 @@ import { Calendar, UserCheck, Trophy, Code } from "lucide-react";
 
 export const TimelineSection = React.memo(function TimelineSection() {
   const timeline = [
-  {
-    icon: Calendar,
-    title: "Registrations Open",
-    date: "",
-    description: "Register your team and get ready for the challenge",
-  },
-  {
-    icon: Calendar,
-    title: "Registration Closes",
-    date: "2nd October 2026",
-    description: "Last date to register your team for ImpactX 26",
-  },
-  {
-    icon: Code,
-    title: "Hackathon Day",
-    date: "9th - 10th October 2026",
-    description: "24 hours of intense coding, building, and innovation",
-  },
-];
+    {
+      icon: Calendar,
+      title: "Registrations Open",
+      date: "",
+      description: "Register your team and get ready for the challenge",
+    },
+    {
+      icon: Calendar,
+      title: "Registration Closes",
+      date: "2nd October 2026",
+      description: "Last date to register your team for ImpactX 26",
+    },
+    {
+      icon: Code,
+      title: "Hackathon Day",
+      date: "8th - 9th October 2026",
+      description: "24 hours of intense coding, building, and innovation",
+    },
+  ];
 
   return (
     <section className="relative py-16 lg:py-24 overflow-hidden">
@@ -57,9 +57,8 @@ export const TimelineSection = React.memo(function TimelineSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className={`flex items-center gap-6 md:gap-8 ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                } flex-row-reverse md:flex-row pl-6 md:pl-0`}
+                className={`flex items-center gap-6 md:gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  } flex-row-reverse md:flex-row pl-6 md:pl-0`}
               >
                 {/* Content Card */}
                 <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>

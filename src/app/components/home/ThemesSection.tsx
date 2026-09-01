@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { Shield, Network, Bot } from "lucide-react";
+import { Shield, Network, Bot, Star } from "lucide-react";
 
 export const ThemesSection = React.memo(function ThemesSection() {
   const themes = [
@@ -91,6 +91,34 @@ export const ThemesSection = React.memo(function ThemesSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* Sponsor Specific Track - Full Width */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-8 group relative"
+        >
+          <div className="relative h-full p-6 lg:p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#60A5FA]/20 overflow-hidden flex flex-col md:flex-row items-start md:items-center gap-6">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            
+            <div className="relative z-10 flex-shrink-0">
+              <div className="mb-6 md:mb-0 p-4 rounded-2xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 border border-white/10 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <Star className="w-8 h-8 text-[#60A5FA]" />
+              </div>
+            </div>
+
+            <div className="relative z-10 flex-grow">
+              <h3 className="text-2xl font-bold text-[#F8FAFC] mb-2 group-hover:text-[#60A5FA] transition-colors duration-300">
+                Sponsor Specific Track
+              </h3>
+              <p className="text-[#F8FAFC]/70 leading-relaxed">
+                This track will be curated in collaboration with the Title Sponsor, allowing them to define a real-world industry problem statement aligned with their domain. Participants will build innovative solutions specifically for this sponsor challenge, giving the sponsor direct exposure to high-quality ideas and talent.
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

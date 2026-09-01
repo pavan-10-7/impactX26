@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "When is ImpactX 26 happening?",
     answer:
-      "ImpactX 26 will be held on 9th and 10th October 2026 at RNS Institute of Technology, Bangalore.",
+      "ImpactX 26 will be held on 8th & 9th Oct, 2026 at RNS Institute of Technology, Bangalore.",
   },
   {
     question: "What is the last date to register?",

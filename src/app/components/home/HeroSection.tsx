@@ -39,7 +39,7 @@ export function HeroSection() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="flex flex-col items-start"
           >
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold tracking-tight bg-gradient-to-r from-[#F8FAFC] via-[#60A5FA] to-[#3B82F6] bg-clip-text text-transparent drop-shadow-2xl mb-6 md:mb-8">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold tracking-tight bg-gradient-to-r from-[#F8FAFC] via-[#60A5FA] to-[#3B82F6] bg-clip-text text-transparent drop-shadow-2xl mb-6 md:mb-8 whitespace-nowrap">
               IMPACTX 26
             </h1>
 
@@ -47,7 +47,7 @@ export function HeroSection() {
               24-Hour National Level Offline Hackathon
             </h2>
             <div className="text-lg md:text-2xl font-medium mb-6 text-[#60A5FA]">
-              9th & 10th October, 2026
+              8th & 9th Oct, 2026
             </div>
 
             <p className="text-base md:text-xl text-[#F8FAFC]/70 mb-10 md:mb-12 max-w-2xl">

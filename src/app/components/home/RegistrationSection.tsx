@@ -13,7 +13,7 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
 
   useEffect(() => {
     // Set target date (example: March 1, 2027)
-    const targetDate = new Date("2026-10-09T00:00:00").getTime();
+    const targetDate = new Date("2026-10-08T00:00:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();

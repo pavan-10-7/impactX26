@@ -14,29 +14,29 @@ export function Events() {
   const navigate = useNavigate();
 
   useEffect(() => {
-  const scrollToHash = () => {
-    if (location.hash) {
-      const id = location.hash.replace("#", "");
-      const element = document.getElementById(id);
+    const scrollToHash = () => {
+      if (location.hash) {
+        const id = location.hash.replace("#", "");
+        const element = document.getElementById(id);
 
-      if (element) {
-        element.scrollIntoView({
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      } else {
+        window.scrollTo({
+          top: 0,
           behavior: "smooth",
-          block: "start",
         });
       }
-    } else {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  };
+    };
 
-  const timeout = setTimeout(scrollToHash, 300);
+    const timeout = setTimeout(scrollToHash, 300);
 
-  return () => clearTimeout(timeout);
-}, [location]);
+    return () => clearTimeout(timeout);
+  }, [location]);
 
   const events = [
     {
@@ -44,10 +44,10 @@ export function Events() {
       name: "ImpactX 26",
       year: "2026-27",
       status: "Upcoming",
-      date: "October 2026",
+      date: "8th & 9th Oct, 2026",
       participants: "150+",
       location: "RNSIT, Bangalore",
-      prize: "₹1,00,000",
+      prize: "₹75,000",
       description: "Our upcoming national-level 24-hour hackathon featuring cutting-edge themes in Cybersecurity, MCP, and Agentic AI.",
       gradient: "from-[#60A5FA]/20 to-[#3B82F6]/10",
       borderGradient: "from-[#60A5FA]/50 to-[#3B82F6]/30",
@@ -69,7 +69,7 @@ export function Events() {
     },
   ];
 
-  
+
 
   // Gallery images from previous events
   const galleryImages = [
@@ -140,11 +140,10 @@ export function Events() {
                         </h2>
                         <p className="text-sm sm:text-lg text-[#F8FAFC]/60">{event.year}</p>
                       </div>
-                      <div className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap ${
-                        event.status === "Upcoming"
+                      <div className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap ${event.status === "Upcoming"
                           ? "bg-gradient-to-r from-[#60A5FA]/20 to-[#3B82F6]/10 border border-[#60A5FA]/30 text-[#60A5FA]"
                           : "bg-white/5 border border-white/10 text-[#F8FAFC]/60"
-                      }`}>
+                        }`}>
                         {event.status}
                       </div>
                     </div>
