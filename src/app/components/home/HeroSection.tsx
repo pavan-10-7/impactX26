@@ -15,7 +15,7 @@ export function HeroSection() {
   const navigate = useNavigate();
 
   const handleScrollToRegistration = useCallback(() => {
-  navigate("/#registration");
+  navigate("/register");
 }, [navigate]);
 
   return (

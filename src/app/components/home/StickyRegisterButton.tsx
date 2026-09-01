@@ -1,5 +1,6 @@
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 import { Button } from "../ui/button";
 
 export function StickyRegisterButton() {
@@ -19,11 +20,10 @@ export function StickyRegisterButton() {
     }
   });
 
+  const navigate = useNavigate();
+
   const handleRegisterClick = () => {
-    const element = document.querySelector("#registration");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    navigate("/register");
   };
 
   return (

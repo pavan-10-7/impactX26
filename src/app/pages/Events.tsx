@@ -2,7 +2,7 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { motion } from "motion/react";
 import { Calendar, Users, MapPin, Trophy, ArrowRight } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 import { CoverflowGallery } from "../components/ui/CoverflowGallery";
 //import { useLocation } from "react-router-dom";
@@ -12,31 +12,6 @@ import { CoverflowGallery } from "../components/ui/CoverflowGallery";
 export function Events() {
   const [selectedEvent, setSelectedEvent] = useState<number | null>(null);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const scrollToHash = () => {
-      if (location.hash) {
-        const id = location.hash.replace("#", "");
-        const element = document.getElementById(id);
-
-        if (element) {
-          element.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      } else {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
-    };
-
-    const timeout = setTimeout(scrollToHash, 300);
-
-    return () => clearTimeout(timeout);
-  }, [location]);
 
   const events = [
     {

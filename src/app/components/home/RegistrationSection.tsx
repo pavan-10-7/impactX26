@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Button } from "../ui/button";
 import { Users, IndianRupee, Calendar, Clock, AlignCenter } from "lucide-react";
+import { useNavigate } from "react-router";
 
 export const RegistrationSection = React.memo(function RegistrationSection() {
+  const navigate = useNavigate();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -143,6 +145,7 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
             {/* CTA Button */}
             <div className="text-center">
               <Button
+                onClick={() => navigate("/register")}
                 className="bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] text-white px-12 py-6 text-lg rounded-full shadow-2xl hover:shadow-[#60A5FA]/50 transition-all duration-300 hover:scale-105"
               >
                 Register Now
