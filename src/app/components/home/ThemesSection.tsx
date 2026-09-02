@@ -75,14 +75,6 @@ export const ThemesSection = React.memo(function ThemesSection() {
                   <p className="text-[#F8FAFC]/70 leading-relaxed">
                     {theme.description}
                   </p>
-
-                  {/* Arrow indicator */}
-                  <div className="mt-6 flex items-center gap-2 text-[#60A5FA] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-2">
-                    <span className="text-sm font-medium">Explore Track</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
                 </div>
 
                 {/* Decorative Elements */}

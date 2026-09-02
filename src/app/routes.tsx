@@ -3,6 +3,7 @@ import { Home } from "./pages/Home";
 import { Events } from "./pages/Events";
 import { Team } from "./pages/Team";
 import { RegistrationRedirect } from "./pages/RegistrationRedirect";
+import { TermsAndConditions } from "./pages/TermsAndConditions";
 import { ScrollToTop } from "./components/ScrollToTop";
 
 function RootLayout() {
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: "register",
         Component: RegistrationRedirect,
+      },
+      {
+        path: "terms-and-conditions",
+        Component: TermsAndConditions,
       },
     ],
   },
