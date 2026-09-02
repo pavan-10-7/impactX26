@@ -11,7 +11,7 @@ export function SponsorsSection() {
   const sponsorCategories: { title: string; sponsors: Sponsor[] }[] = [
   {
     title: "Title Sponsor",
-    sponsors: [{ name: "Title Sponsor", size: "large", logoUrl: "https://via.placeholder.com/220x80/1a1a1a/60A5FA?text=Title+Sponsor" }],
+    sponsors: [{ name: "Title Sponsor", size: "large", logoUrl: "/educaro_logo.png" }],
   },
   {
     title: "Platform Partner",
