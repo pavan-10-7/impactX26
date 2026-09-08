@@ -21,8 +21,8 @@ export const WhyParticipate = React.memo(function WhyParticipate() {
     },
     {
       icon: Rocket,
-      title: "Incubation Opportunities",
-      description: "Get access to incubation programs to take your idea to the next level",
+      title: "Internship Opportunities",
+      description: "Get access to internship and career opportunities offered by sponsors and industry partners",
     },
   ];
 

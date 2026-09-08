@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router";
 import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter, Youtube } from "lucide-react";
 
 export const Footer = React.memo(function Footer() {
@@ -11,12 +12,21 @@ export const Footer = React.memo(function Footer() {
 
   const contactInfo = [
     { icon: Mail, text: "ieeecsrns@gmail.com", href: "mailto:ieeecsrns@gmail.com" },
-    { icon: Phone, text: "+91 XXXXX XXXXX", href: "tel:+91XXXXXXXXXX" },
-    { icon: MapPin, text: "RNS Institute of Technology, Bangalore", href: "https://maps.app.goo.gl/1aRCvjL3bGrP8FLA9" },
+    { icon: Phone, text: "+91 72591 05691", href: "tel:+917259105691" },
+    {
+      icon: MapPin,
+      text: "RNS Institute of Technology, Bangalore",
+      href: "https://www.google.com/maps/search/?api=1&query=RNS+Institute+of+Technology+Bengaluru",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
   ];
 
   return (
-    <footer className="relative py-16 border-t border-white/10 bg-gradient-to-b from-[#020617] to-[#000814] overflow-hidden">
+    <footer
+  id="contact"
+  className="relative py-16 border-t border-white/10 bg-gradient-to-b from-[#020617] to-[#000814] overflow-hidden"
+>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(96,165,250,0.05),transparent_50%)]" />
 
       <div className="relative max-w-7xl mx-auto px-6">
@@ -52,6 +62,8 @@ export const Footer = React.memo(function Footer() {
                 <a
                   key={index}
                   href={item.href}
+                  target={item.target}
+                  rel={item.rel}
                   className="flex items-start gap-3 text-[#F8FAFC]/60 hover:text-[#60A5FA] transition-colors group"
                 >
                   <item.icon className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
@@ -100,6 +112,12 @@ export const Footer = React.memo(function Footer() {
           <p className="text-sm text-[#F8FAFC]/40">
             © {new Date().getFullYear()} ImpactX 26. Organized by IEEE Computer Society RNSIT & Department of CSE (Cyber Security). All rights reserved.
           </p>
+          <Link
+            to="/terms-and-conditions"
+            className="mt-3 inline-block text-sm text-[#F8FAFC]/50 transition-colors hover:text-[#60A5FA]"
+          >
+            Terms &amp; Conditions
+          </Link>
         </motion.div>
       </div>
     </footer>

@@ -5,7 +5,7 @@ import { Clock, Trophy, Users, Building2, Globe } from "lucide-react";
 export const StatisticsStrip = React.memo(function StatisticsStrip() {
   const stats = [
     { icon: Clock, value: "24 Hours", label: "Hackathon" },
-    { icon: Trophy, value: "₹1,00,000", label: "Prize Pool" },
+    { icon: Trophy, value: "₹75,000", label: "Prize Pool" },
     { icon: Users, value: "150+", label: "Participants" },
     { icon: Building2, value: "20+", label: "Colleges" },
     { icon: Globe, value: "National", label: "Level Event" },

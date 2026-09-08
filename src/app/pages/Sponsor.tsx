@@ -42,10 +42,22 @@ function GlowOrb({ className = "" }: { className?: string }) {
 }
 export function Sponsor() {
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "instant" as ScrollBehavior,
-    });
+    const scrollToHash = () => {
+      if (window.location.hash) {
+        const id = window.location.hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        window.scrollTo({
+          top: 0,
+          behavior: "instant" as ScrollBehavior,
+        });
+      }
+    };
+    const timeout = setTimeout(scrollToHash, 300);
+    return () => clearTimeout(timeout);
   }, []);
 
   return (

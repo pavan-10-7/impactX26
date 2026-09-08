@@ -7,31 +7,25 @@ export const TimelineSection = React.memo(function TimelineSection() {
     {
       icon: Calendar,
       title: "Registrations Open",
-      date: "August 2026",
+      date: "",
       description: "Register your team and get ready for the challenge",
     },
     {
-      icon: UserCheck,
-      title: "Shortlisting Round",
-      date: "September 2026",
-      description: "Teams will be shortlisted based on online idea submission",
-    },
-    {
-      icon: Trophy,
-      title: "Finalist Announcement",
-      date: "October 2026",
-      description: "Selected teams will participate in the final offline round",
+      icon: Calendar,
+      title: "Registration Closes",
+      date: "2nd October 2026",
+      description: "Last date to register your team for ImpactX 26",
     },
     {
       icon: Code,
       title: "Hackathon Day",
-      date: "October 2026",
+      date: "8th - 9th October 2026",
       description: "24 hours of intense coding, building, and innovation",
     },
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-16 lg:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(96,165,250,0.08),transparent_60%)]" />
 
       <div className="relative max-w-7xl mx-auto px-6">
@@ -42,10 +36,10 @@ export const TimelineSection = React.memo(function TimelineSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#F8FAFC] to-[#60A5FA] bg-clip-text text-transparent">
             Event Timeline
           </h2>
-          <p className="text-lg text-[#F8FAFC]/60 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-[#F8FAFC]/60 max-w-2xl mx-auto">
             Mark your calendars and stay updated with the event schedule
           </p>
         </motion.div>
@@ -55,7 +49,7 @@ export const TimelineSection = React.memo(function TimelineSection() {
           {/* Vertical Line */}
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#60A5FA]/50 to-transparent" />
 
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {timeline.map((item, index) => (
               <motion.div
                 key={index}
@@ -63,13 +57,12 @@ export const TimelineSection = React.memo(function TimelineSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className={`flex items-center gap-8 ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
+                className={`flex items-center gap-6 md:gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  } flex-row-reverse md:flex-row pl-6 md:pl-0`}
               >
                 {/* Content Card */}
                 <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
-                  <div className="inline-block p-6 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 group">
+                  <div className="inline-block p-5 md:p-6 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-[#60A5FA]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#60A5FA]/10 group">
                     <div className={`flex items-center gap-4 mb-3 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
                       <div className="p-3 rounded-2xl bg-gradient-to-br from-[#60A5FA]/20 to-[#3B82F6]/10 border border-white/10 group-hover:scale-110 transition-transform duration-300">
                         <item.icon className="w-6 h-6 text-[#60A5FA]" />

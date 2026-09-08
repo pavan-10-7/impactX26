@@ -4,36 +4,20 @@ import { motion } from "motion/react";
 interface Sponsor {
   name: string;
   size?: string;
+  logoUrl?: string;
 }
 
 export function SponsorsSection() {
   const sponsorCategories: { title: string; sponsors: Sponsor[] }[] = [
-    {
-      title: "Title Sponsor",
-      sponsors: [{ name: "Title Sponsor", size: "large" }],
-    },
-    {
-      title: "Co-Sponsor",
-      sponsors: [{ name: "Co-Sponsor 1" }, { name: "Co-Sponsor 2" }],
-    },
-    {
-      title: "Supporting Sponsor",
-      sponsors: [
-        { name: "Supporting 1" },
-        { name: "Supporting 2" },
-        { name: "Supporting 3" },
-      ],
-    },
-    {
-      title: "Community Partners",
-      sponsors: [
-        { name: "Partner 1" },
-        { name: "Partner 2" },
-        { name: "Partner 3" },
-        { name: "Partner 4" },
-      ],
-    },
-  ];
+  {
+    title: "Title Sponsor",
+    sponsors: [{ name: "Title Sponsor", size: "large", logoUrl: "/educaro_logo.png" }],
+  },
+  {
+    title: "Platform Partner",
+    sponsors: [{ name: "Hack2Skill", size: "large", logoUrl: "/H2S_White_Logo.png" }],
+  },
+];
 
   return (
     <section className="relative py-24 overflow-hidden">
@@ -90,10 +74,11 @@ export function SponsorsSection() {
 
                     <div className="relative flex items-center justify-center h-full">
                       <div className="text-center">
-                        <div className="text-[#F8FAFC]/40 font-medium">
-                          {sponsor.name}
-                        </div>
-                        <div className="mt-2 text-xs text-[#F8FAFC]/20">Logo</div>
+                        <img
+                        src={sponsor.logoUrl || `https://via.placeholder.com/220x80/1a1a1a/60A5FA?text=${encodeURIComponent(sponsor.name)}`}
+                        alt={sponsor.name}
+                        className="max-h-20 max-w-[220px] object-contain mx-auto"
+                        />
                       </div>
                     </div>
                   </div>

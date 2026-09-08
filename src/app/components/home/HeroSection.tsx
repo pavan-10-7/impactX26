@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { ChevronDown } from "lucide-react";
 import { HeroSequence } from "./HeroSequence";
 import { useRef, useCallback } from "react";
+import { useNavigate } from "react-router";
 
 export function HeroSection() {
   const containerRef = useRef<HTMLElement>(null);
@@ -11,13 +12,11 @@ export function HeroSection() {
     offset: ["start start", "end end"]
   });
 
-  const handleScrollToThemes = useCallback(() => {
-    document.querySelector("#themes")?.scrollIntoView({ behavior: "smooth" });
-  }, []);
+  const navigate = useNavigate();
 
   const handleScrollToRegistration = useCallback(() => {
-    document.querySelector("#registration")?.scrollIntoView({ behavior: "smooth" });
-  }, []);
+  navigate("/register");
+}, [navigate]);
 
   return (
     <section ref={containerRef} className="relative h-[2000px]">
@@ -32,7 +31,7 @@ export function HeroSection() {
           <HeroSequence scrollYProgress={scrollYProgress} />
         </div>
 
-        <div className="relative z-10 w-full h-screen flex flex-col justify-center" style={{ paddingLeft: '8%', paddingRight: '52%', paddingTop: '8vh' }}>
+        <div className="relative z-10 w-full h-screen flex flex-col justify-center px-6 pt-[12vh] md:pt-[8vh] lg:pl-[8%] lg:pr-[52%]">
           {/* Single parent motion handles all content entrance — no nested animations */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -40,33 +39,29 @@ export function HeroSection() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="flex flex-col items-start"
           >
-            <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight bg-gradient-to-r from-[#F8FAFC] via-[#60A5FA] to-[#3B82F6] bg-clip-text text-transparent drop-shadow-2xl mb-8">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold tracking-tight bg-gradient-to-r from-[#F8FAFC] via-[#60A5FA] to-[#3B82F6] bg-clip-text text-transparent drop-shadow-2xl mb-6 md:mb-8 whitespace-nowrap">
               IMPACTX 26
             </h1>
 
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-[#F8FAFC] max-w-3xl">
+            <h2 className="text-xl md:text-3xl font-semibold mb-3 text-[#F8FAFC] max-w-3xl">
               24-Hour National Level Offline Hackathon
             </h2>
+            <div className="text-lg md:text-2xl font-medium mb-6 text-[#60A5FA]">
+              8th & 9th Oct, 2026
+            </div>
 
-            <p className="text-lg md:text-xl text-[#F8FAFC]/70 mb-12 max-w-2xl">
+            <p className="text-base md:text-xl text-[#F8FAFC]/70 mb-10 md:mb-12 max-w-2xl">
               Presented by IEEE Computer Society RNSIT and Department of CSE (Cyber Security)
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-start w-full">
-              <Button
-                onClick={handleScrollToRegistration}
-                className="bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] text-black font-semibold px-10 py-7 text-lg md:text-xl rounded-full shadow-xl shadow-[#60A5FA]/20 hover:shadow-[#60A5FA]/50 transition-all duration-300 hover:scale-105"
+            <div className="flex justify-start w-full">
+            <Button
+              onClick={handleScrollToRegistration}
+              className="bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] text-black font-semibold px-10 py-6 md:px-12 md:py-7 text-base md:text-xl rounded-full shadow-xl shadow-[#60A5FA]/20 hover:shadow-[#60A5FA]/50 transition-all duration-300 hover:scale-105"
               >
-                Register Now
+              Register Now
               </Button>
-              <Button
-                onClick={handleScrollToThemes}
-                variant="outline"
-                className="border-[#60A5FA]/50 text-[#60A5FA] px-10 py-7 text-lg md:text-xl rounded-full backdrop-blur-sm bg-white/5 hover:bg-white/10 transition-all duration-300"
-              >
-                Explore Themes
-              </Button>
-            </div>
+              </div>
 
             {/* Scroll Indicator */}
             <div className="mt-[10vh] flex flex-col items-start gap-2 text-[#F8FAFC]/50">
