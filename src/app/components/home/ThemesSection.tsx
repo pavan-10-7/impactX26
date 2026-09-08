@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { Shield, Network, Bot, Star, ExternalLink } from "lucide-react";
 
-const AGENTIC_PROBLEM_STATEMENT_URL = "https://drive.google.com/file/d/1DSUIH3_739kV8pgfjDoS1ZCj47LXpG3Q/view?usp=sharing";
+const AGENTIC_PROBLEM_STATEMENT_URL = "https://drive.google.com/file/d/1DSUIH3_739kV8pgfjDoS1ZCj47LXpG3Q/view?usp=drive_link";
 
 export const ThemesSection = React.memo(function ThemesSection() {
   const themes = [
