@@ -151,7 +151,7 @@ export const PrizePoolSection = React.memo(function PrizePoolSection() {
                   Sponsor Specific Track Winner
                 </h3>
                 <p className="text-sm md:text-base text-[#F8FAFC]/60">
-                  Most innovative approach across all tracks
+                  Team with the best solution to Educaro's problem statement under Agentic AI theme
                 </p>
               </div>
             </div>

@@ -13,7 +13,7 @@ export const TimelineSection = React.memo(function TimelineSection() {
     {
       icon: Calendar,
       title: "Registration Closes",
-      date: "2nd October 2026",
+      date: "25th September 2026",
       description: "Last date to register your team for ImpactX 26",
     },
     {

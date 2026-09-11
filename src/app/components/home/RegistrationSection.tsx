@@ -15,7 +15,7 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
 
   useEffect(() => {
     // Set target date (example: March 1, 2027)
-    const targetDate = new Date("2026-10-08T00:00:00").getTime();
+    const targetDate = new Date("2026-09-26T00:00:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -48,7 +48,7 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
     {
       icon: Calendar,
       label: "Registration Deadline",
-      value: "October 2, 2026",
+      value: "September 25, 2026",
     },
   ];
 
@@ -137,7 +137,7 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
               <ul className="text-sm text-[#F8FAFC]/70 space-y-2">
               <li>• All team members must be current students (B.E/B.Tech/MCA)</li>
               <li>• Each team must have 2–4 members</li>
-              <li>• Registration closes on 2nd October 2026</li>
+              <li>• Registration closes on 25th September 2026</li>
               <li>• The hackathon will be conducted offline at RNSIT, Bangalore</li>
             </ul>
             </div>
