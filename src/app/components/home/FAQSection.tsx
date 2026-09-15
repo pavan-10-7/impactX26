@@ -16,7 +16,7 @@ const faqs = [
   {
     question: "What is the last date to register?",
     answer:
-      "Registrations close on 2nd October 2026.",
+      "Registrations close on 25th ber 2026.",
   },
   {
     question: "How many members can be there in a team?",
@@ -32,6 +32,11 @@ const faqs = [
     question: "Is the hackathon online or offline?",
     answer:
       "ImpactX 26 is an offline hackathon conducted at RNS Institute of Technology, Bangalore.",
+  },
+  {
+    question: "How is the prizepool divided?",
+    answer:
+      "Each track will have a Winner and Runner-Up with ₹15,000 and ₹10,000 respectively.",
   },
 ];
 
