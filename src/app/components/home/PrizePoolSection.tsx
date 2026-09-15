@@ -30,19 +30,19 @@ export const PrizePoolSection = React.memo(function PrizePoolSection() {
   const topPrizes = [
     {
       icon: Trophy,
-      title: "Track Winner 1",
+      title: "Pool Amount",
       amount: "₹25,000",
       description: "Cybersecurity & Blockchain",
     },
     {
       icon: Trophy,
-      title: "Track Winner 2",
+      title: "Pool Amount",
       amount: "₹25,000",
       description: "Model Context Protocol",
     },
     {
       icon: Trophy,
-      title: "Track Winner 3",
+      title: "Pool Amount",
       amount: "₹25,000",
       description: "Agentic AI",
     },
