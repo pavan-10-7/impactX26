@@ -11,6 +11,7 @@ import { StickyRegisterButton } from "../components/home/StickyRegisterButton";
 // Lazy loaded components (below the fold)
 const TimelineSection = React.lazy(() => import("../components/home/TimelineSection").then(module => ({ default: module.TimelineSection })));
 const RegistrationSection = React.lazy(() => import("../components/home/RegistrationSection").then(module => ({ default: module.RegistrationSection })));
+const RegistrationFlowSection = React.lazy(() => import("../components/home/RegistrationFlowSection").then(module => ({ default: module.RegistrationFlowSection })));
 const PrizePoolSection = React.lazy(() => import("../components/home/PrizePoolSection").then(module => ({ default: module.PrizePoolSection })));
 const FAQSection = React.lazy(() =>
   import("../components/home/FAQSection").then(module => ({
@@ -39,6 +40,7 @@ export function Home() {
       <Suspense fallback={<div className="h-[20vh]" />}>
         <TimelineSection />
         <RegistrationSection />
+        <RegistrationFlowSection />
         <PrizePoolSection />
         <FAQSection />
         <SponsorsSection />

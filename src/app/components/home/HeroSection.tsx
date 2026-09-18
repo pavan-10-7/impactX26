@@ -54,14 +54,25 @@ export function HeroSection() {
               Presented by IEEE Computer Society RNSIT and Department of CSE (Cyber Security)
             </p>
 
-            <div className="flex justify-start w-full">
-            <Button
-              onClick={handleScrollToRegistration}
-              className="bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] text-black font-semibold px-10 py-6 md:px-12 md:py-7 text-base md:text-xl rounded-full shadow-xl shadow-[#60A5FA]/20 hover:shadow-[#60A5FA]/50 transition-all duration-300 hover:scale-105"
+            <div className="flex justify-start w-full gap-4 md:gap-6 flex-wrap">
+              <Button
+                onClick={handleScrollToRegistration}
+                className="bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] text-black font-semibold px-10 py-6 md:px-12 md:py-7 text-base md:text-xl rounded-full shadow-xl shadow-[#60A5FA]/20 hover:shadow-[#60A5FA]/50 transition-all duration-300 hover:scale-105"
               >
-              Register Now
+                Register Now
               </Button>
-              </div>
+              <Button
+                onClick={() => {
+                  const element = document.getElementById('registration-flow');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="bg-transparent border-2 border-[#60A5FA]/50 text-[#F8FAFC] font-semibold px-10 py-6 md:px-12 md:py-7 text-base md:text-xl rounded-full hover:bg-[#60A5FA]/10 transition-all duration-300 hover:scale-105"
+              >
+                How to Register?
+              </Button>
+            </div>
 
             {/* Scroll Indicator */}
             <div className="mt-[10vh] flex flex-col items-start gap-2 text-[#F8FAFC]/50">
