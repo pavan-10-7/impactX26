@@ -16,7 +16,7 @@ const faqs = [
   {
     question: "What is the last date to register?",
     answer:
-      "Registrations close on 25th ber 2026.",
+      "Registrations close on 25th September 2026.",
   },
   {
     question: "How many members can be there in a team?",
