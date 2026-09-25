@@ -23,7 +23,7 @@ export function StickyRegisterButton() {
   const navigate = useNavigate();
 
   const handleRegisterClick = () => {
-    navigate("/register");
+    navigate("/registration-closed");
   };
 
   return (

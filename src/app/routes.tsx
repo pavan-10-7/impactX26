@@ -2,14 +2,17 @@ import { createBrowserRouter, Outlet } from "react-router";
 import { Home } from "./pages/Home";
 import { Events } from "./pages/Events";
 import { Team } from "./pages/Team";
-import { RegistrationRedirect } from "./pages/RegistrationRedirect";
+import { RegistrationClosed } from "./pages/RegistrationClosed";
 import { TermsAndConditions } from "./pages/TermsAndConditions";
+import { Sponsor } from "./pages/Sponsor";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { RegistrationClosedModal } from "./components/RegistrationClosedModal";
 
 function RootLayout() {
   return (
     <>
       <ScrollToTop />
+      <RegistrationClosedModal />
       <Outlet />
     </>
   );
@@ -33,12 +36,16 @@ export const router = createBrowserRouter([
         Component: Team,
       },
       {
-        path: "register",
-        Component: RegistrationRedirect,
+        path: "registration-closed",
+        Component: RegistrationClosed,
       },
       {
         path: "terms-and-conditions",
         Component: TermsAndConditions,
+      },
+      {
+        path: "sponsor",
+        Component: Sponsor,
       },
     ],
   },

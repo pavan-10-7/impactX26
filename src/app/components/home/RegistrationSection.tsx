@@ -1,38 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Button } from "../ui/button";
-import { Users, IndianRupee, Calendar, Clock, AlignCenter } from "lucide-react";
+import { Users, IndianRupee, Calendar, Lock, AlignCenter } from "lucide-react";
 import { useNavigate } from "react-router";
 
 export const RegistrationSection = React.memo(function RegistrationSection() {
   const navigate = useNavigate();
-  const [timeLeft, setTimeLeft] = useState({
+  const [timeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
   });
-
-  useEffect(() => {
-    // Set target date (example: March 1, 2027)
-    const targetDate = new Date("2026-09-26T00:00:00").getTime();
-
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
-
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((difference % (1000 * 60)) / 1000),
-        });
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const registrationDetails = [
     {
@@ -88,8 +67,8 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
             {/* Countdown Timer */}
             <div className="mb-8">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-6">
-                <Clock className="w-5 h-5 text-[#60A5FA] hidden sm:block" />
-                <h3 className="text-lg sm:text-xl font-semibold text-[#F8FAFC] text-center">The Countdown Begins</h3>
+                <Lock className="w-5 h-5 text-[#60A5FA] hidden sm:block" />
+                <h3 className="text-lg sm:text-xl font-semibold text-[#F8FAFC] text-center">Closed</h3>
               </div>
               <div className="grid grid-cols-4 gap-2 md:gap-4 max-w-2xl mx-auto">
                 {[
@@ -145,7 +124,7 @@ export const RegistrationSection = React.memo(function RegistrationSection() {
             {/* CTA Button */}
             <div className="text-center">
               <Button
-                onClick={() => navigate("/register")}
+                onClick={() => navigate("/registration-closed")}
                 className="bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] text-white px-12 py-6 text-lg rounded-full shadow-2xl hover:shadow-[#60A5FA]/50 transition-all duration-300 hover:scale-105"
               >
                 Register Now
