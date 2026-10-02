@@ -4,14 +4,14 @@ import { Mail, MessageCircle, Linkedin } from "lucide-react";
 
 const contactPeople = [
   {
-    role: "IEEE Chair",
+    role: "Student Chair",
     name: "Pavankumar G Aralikatti",
     email: "pavankumargarallikatti24cy@rnsit.ac.in",
     whatsapp: "917259105691",
     linkedin: "https://www.linkedin.com/in/pavankumar-g-aralikatti-9715aa271/",
   },
   {
-    role: "IEEE Vice Chair",
+    role: "Student Vice Chair",
     name: "Nishita Bhat",
     email: "nishitabhat24cy@rnsit.ac.in",
     whatsapp: "919019656767",
