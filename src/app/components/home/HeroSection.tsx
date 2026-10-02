@@ -63,14 +63,14 @@ export function HeroSection() {
               </Button>
               <Button
                 onClick={() => {
-                  const element = document.getElementById('registration-flow');
+                  const element = document.getElementById('event-timeline');
                   if (element) {
                     element.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
                 className="bg-transparent border-2 border-[#60A5FA]/50 text-[#F8FAFC] font-semibold px-10 py-6 md:px-12 md:py-7 text-base md:text-xl rounded-full hover:bg-[#60A5FA]/10 transition-all duration-300 hover:scale-105"
               >
-                How to Register?
+                Event Timeline
               </Button>
             </div>
 
