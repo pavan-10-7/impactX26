@@ -5,13 +5,18 @@ interface Sponsor {
   name: string;
   size?: string;
   logoUrl?: string;
+  logoClassName?: string;
 }
 
 export function SponsorsSection() {
   const sponsorCategories: { title: string; sponsors: Sponsor[] }[] = [
   {
     title: "Title Sponsor",
-    sponsors: [{ name: "Title Sponsor", size: "large", logoUrl: "/educaro_logo.png" }],
+    sponsors: [{ name: "Educaro", size: "large", logoUrl: "/educaro_logo.png" }],
+  },
+  {
+    title: "Associate Sponsor",
+    sponsors: [{ name: "Invictus", size: "large", logoUrl: "/Invictus_logo.png", logoClassName: "scale-[3.5]" }],
   },
   {
     title: "Platform Partner",
@@ -77,7 +82,7 @@ export function SponsorsSection() {
                         <img
                         src={sponsor.logoUrl || `https://via.placeholder.com/220x80/1a1a1a/60A5FA?text=${encodeURIComponent(sponsor.name)}`}
                         alt={sponsor.name}
-                        className="max-h-20 max-w-[220px] object-contain mx-auto"
+                        className={`max-h-20 max-w-[220px] object-contain mx-auto ${sponsor.logoClassName || ""}`}
                         />
                       </div>
                     </div>
